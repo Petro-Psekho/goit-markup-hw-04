@@ -16,17 +16,13 @@
   --inverts-color: #ffffff;
   --header-border-color: #ececec;
   --portfolio-border-color: #eeeeee;
+  --icon-color: #afb1b8;
 }
 
 /* UTILTTES */
 
- {
+* {
   outline: 1px dotted #ccc;
-}
-
-a {
-  padding: 0;
-  margin: 0;
 }
 
 h1,
@@ -153,11 +149,9 @@ body {
   color: var(--main-color);
 }
 
-
 .contact-nav {
   display: flex;
   margin-left: auto;
-  
 }
 
 .contact-nav .item:not(:last-child) {
@@ -170,18 +164,12 @@ body {
   font-size: 14px;
   line-height: 1, 14;
   letter-spacing: 0.02em;
-  
 }
 
 .contact-nav .icon {
-  padding: 0;
   margin-right: 10px;
   fill: currentColor;
-   background-color: red;
-  
 }
-
-
 
 .contact-nav .link:hover,
 .contact-nav .link:focus {
@@ -192,10 +180,19 @@ body {
 /* HERO */
 
 .hero {
-  background-color: #2f303a;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1600px;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  background-color: #2f303a;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(/images/img.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -238,6 +235,17 @@ body {
 }
 
 /* OUR FEATURES */
+
+.icon-features {
+  display: flex;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--button-bgc);
+}
 
 .features-list .text {
   font-size: 14px;
@@ -331,6 +339,34 @@ body {
 
 .team-list .item:not(:last-child) {
   margin-right: 30px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.icon-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  fill: var(--icon-color);
+}
+
+.social .social-list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon-social:hover,
+.icon-social:focus {
+  fill: #ffffff;
+  background-color: var(--main-color);
 }
 
 /* PORTFOLIO */
