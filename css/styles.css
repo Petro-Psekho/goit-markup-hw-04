@@ -20,6 +20,15 @@
 
 /* UTILTTES */
 
+ {
+  outline: 1px dotted #ccc;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+}
+
 h1,
 h2,
 h3,
@@ -144,9 +153,11 @@ body {
   color: var(--main-color);
 }
 
+
 .contact-nav {
   display: flex;
   margin-left: auto;
+  
 }
 
 .contact-nav .item:not(:last-child) {
@@ -159,11 +170,23 @@ body {
   font-size: 14px;
   line-height: 1, 14;
   letter-spacing: 0.02em;
+  
 }
+
+.contact-nav .icon {
+  padding: 0;
+  margin-right: 10px;
+  fill: currentColor;
+   background-color: red;
+  
+}
+
+
 
 .contact-nav .link:hover,
 .contact-nav .link:focus {
   color: var(--main-color);
+  fill: var(--main-color);
 }
 
 /* HERO */
@@ -393,6 +416,26 @@ body {
   font-family: roboto;
   font-size: 16px;
   line-height: 1.88;
+}
+
+/* REGULAR CUSTOMERS */
+
+.customers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.customers .link {
+  display: block;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  padding-top: 16px;
+  padding-right: 32px;
+  padding-bottom: 16px;
+  padding-left: 32px;
 }
 
 /* FOOTER */
