@@ -21,9 +21,9 @@
 
 /* UTILTTES */
 
-* {
+/* * {
   outline: 1px dotted #ccc;
-}
+} */
 
 h1,
 h2,
@@ -159,11 +159,16 @@ body {
 }
 
 .contact-nav .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
-  line-height: 1, 14;
+  line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .contact-nav .icon {
@@ -177,7 +182,7 @@ body {
   fill: var(--main-color);
 }
 
-/* HERO */
+/* ----------------- HERO ----------------- */
 
 .hero {
   margin-left: auto;
@@ -188,7 +193,10 @@ body {
   padding-bottom: 200px;
 
   background-color: #2f303a;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
     url(/images/img.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -369,7 +377,7 @@ body {
   background-color: var(--main-color);
 }
 
-/* REGULAR CUSTOMERS */
+/* ------------ REGULAR CUSTOMERS ------------ */
 
 .customers {
   display: flex;
@@ -377,7 +385,7 @@ body {
   justify-content: space-between;
 }
 
-.customers .link {
+.customers .link .icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -394,8 +402,8 @@ body {
   fill: var(--icon-color);
 }
 
-.customers .icon:hover,
-.customers .icon:focus {
+.customers .link:hover .icon,
+.customers .link:hover .icon {
   fill: var(--main-color);
   border-color: var(--main-color);
 }
@@ -439,7 +447,7 @@ body {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* GRID */
+/* --------------- GRID --------------- */
 
 .portfolio-list {
   display: flex;
@@ -448,6 +456,12 @@ body {
 
 .portfolio-list .item {
   width: calc((100% - 60px) / 3);
+}
+
+.portfolio-list .item:hover,
+.portfolio-list .item:focus {
+  box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
+    1px 4px 6px rgb(0 0 0 / 16%);
 }
 
 .item-border {
@@ -489,13 +503,23 @@ body {
   line-height: 1.88;
 }
 
-/* FOOTER */
+/* --------------- FOOTER --------------- */
 
 .footer {
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
 
   background-color: #2f303a;
+}
+
+.footer-flex {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-address {
+  margin-right: 70px;
 }
 
 .footer-logo {
@@ -514,7 +538,7 @@ body {
   color: var(--main-color);
 }
 
-.address-title .link {
+.address-title .item .link-address {
   color: var(--inverts-color);
   font-style: normal;
   font-size: 14px;
@@ -536,4 +560,41 @@ body {
 
 .address-title .item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.title-footer {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  color: #ffffff;
+}
+
+.social-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.icon-social-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  fill: #ffffff;
+}
+
+.social-footer .social-list-footer:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon-social-footer:hover,
+.icon-social-footer:focus {
+  fill: #ffffff;
+  background-color: var(--main-color);
 }
