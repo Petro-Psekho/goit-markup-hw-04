@@ -129,7 +129,7 @@ body {
 }
 
 .site-nav .link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -378,24 +378,27 @@ body {
 
 .customers {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
-.customers .link .icon {
+.customers .item {
+  width: calc((100%-150px) / 6);
+}
+
+.customers .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.customers .item .link {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 170px;
+  justify-content: center;
+
   height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
 }
 
-.customers .icon {
-  width: 106px;
-  height: 60px;
-
+.customers .link .icon {
   fill: var(--icon-color);
 }
 
@@ -455,8 +458,12 @@ body {
   width: calc((100% - 60px) / 3);
 }
 
-.portfolio-list .item:hover,
-.portfolio-list .item:focus {
+.portfolio-list .item .link {
+  display: block;
+}
+
+.portfolio-list .item:hover .link,
+.portfolio-list .item:focus .link {
   box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
     1px 4px 6px rgb(0 0 0 / 16%);
 }
