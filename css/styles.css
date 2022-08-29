@@ -381,7 +381,7 @@ body {
 }
 
 .customers .item {
-  width: calc((100%- 150px) / 6);
+  width: calc((100% - 150px) / 6);
 }
 
 .customers .item:not(:last-child) {
@@ -392,7 +392,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
   height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
